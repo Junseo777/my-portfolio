@@ -1,0 +1,14 @@
+/* ---- THEME VARIABLES ---------------------------------------------------- */
+:root{
+  --bg:#000;                 
+  --panel:#16181c;           
+  --panel-hover:#1d1f23;
+  --border:#2f3336;
+  --text:#e7e9ea;
+  --dim:#71767b;                  
+  --blue:#1d9bf0;                                       
+  --blue-hover:#1a8cd8;
+  --like:#f91880;                                       
+  --rt:#00ba7c;                                          
+  --hover-tint:rgba(231,233,234,.03);
+}
