@@ -14,9 +14,10 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}          /* smooth-scroll when tabs are clicked */
+html{scroll-behavior:smooth}         
 body{
-  background:var(--bg);color:var(--text);
+  background:var(--bg);
+  color:var(--text);
   font-family:"Albert Sans",-apple-system,BlinkMacSystemFont,sans-serif;
   -webkit-font-smoothing:antialiased;
 }
@@ -24,3 +25,35 @@ a{color:inherit;text-decoration:none}
 svg{display:block}
 .icon-sm{width:18px;height:18px;fill:currentColor}
 .verified{width:19px;height:19px}
+
+/* ---- LAYOUT: two centred columns ---------------------------------------*/
+
+/* ---- CENTER------------------------------------------------------ */
+.feed{border-left:1px solid var(--border);border-right:1px solid var(--border);min-height:100vh}
+
+.topbar{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);
+  background:rgba(0,0,0,.65);padding:0 16px;display:flex;align-items:center;height:53px}
+.topbar .topbar__info{line-height:1.15}
+.topbar .topbar__info .topbar__name{font-weight:800;font-size:1.25rem}
+.topbar .topbar__info .topbar__count{color:var(--dim);font-size:.82rem}
+
+.banner{height:200px;
+  background:radial-gradient(120% 120% at 20% 0%,#1d9bf0 0%,#0d4d75 38%,#0a2233 70%,#06141d 100%)}
+
+.profile{padding:0 16px 12px;position:relative;border-bottom:1px solid var(--border)}
+.pfp-wrap{position:absolute;top:-67px;left:16px;width:134px;height:134px;border-radius:50%;
+  background:var(--bg);padding:4px}
+.pfp{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center;}
+.profile-actions{display:flex;justify-content:flex-end;padding-top:12px}
+.edit-btn{background:transparent;color:var(--text);font-weight:700;border:1px solid #536471;
+  border-radius:9999px;padding:9px 18px;font-size:.95rem;cursor:pointer;transition:background .2s}
+.edit-btn:hover{background:var(--hover-tint)}
+.identity{margin-top:14px}
+.identity .name{font-size:1.45rem;font-weight:800;display:flex;align-items:center;gap:5px}
+.identity .handle{color:var(--dim);font-size:1rem}
+.bio{margin-top:12px;font-size:1rem;line-height:1.4}
+.meta{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:12px;color:var(--dim);font-size:.95rem}
+.meta span{display:flex;align-items:center;gap:5px}
+.meta a{color:var(--blue)}
+.counts{display:flex;gap:20px;margin-top:12px;font-size:.95rem}
+.counts b{color:var(--text)} .counts .c{color:var(--dim)}
