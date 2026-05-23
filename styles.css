@@ -27,6 +27,10 @@ svg{display:block}
 .verified{width:19px;height:19px}
 
 /* ---- LAYOUT: two centred columns ---------------------------------------*/
+.app{
+  max-width:988px;margin:0 auto;
+  display:grid;grid-template-columns:minmax(0,600px) 350px;
+}
 
 /* ---- CENTER------------------------------------------------------ */
 .feed{border-left:1px solid var(--border);border-right:1px solid var(--border);min-height:100vh}
