@@ -41,8 +41,12 @@ svg{display:block}
 .topbar .topbar__info .topbar__name{font-weight:800;font-size:1.25rem}
 .topbar .topbar__info .topbar__count{color:var(--dim);font-size:.82rem}
 
-.banner{height:200px;
-  background:radial-gradient(120% 120% at 20% 0%,#1d9bf0 0%,#0d4d75 38%,#0a2233 70%,#06141d 100%)}
+.banner {
+  height: 200px;
+  background-image: url('./images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
 .profile{padding:0 16px 12px;position:relative;border-bottom:1px solid var(--border)}
 .pfp-wrap{position:absolute;top:-67px;left:16px;width:134px;height:134px;border-radius:50%;
@@ -61,3 +65,17 @@ svg{display:block}
 .meta a{color:var(--blue)}
 .counts{display:flex;gap:20px;margin-top:12px;font-size:.95rem}
 .counts b{color:var(--text)} .counts .c{color:var(--dim)}
+
+/* ---- TAB BAR-----------------------*/
+.tabs{display:flex;border-bottom:1px solid var(--border);position:sticky;top:53px;z-index:15;
+  backdrop-filter:blur(12px);background:rgba(0,0,0,.65);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:1 0 auto;text-align:center;padding:0 18px;height:53px;display:flex;align-items:center;
+  justify-content:center;color:var(--dim);font-weight:600;cursor:pointer;position:relative;
+  transition:background .2s;white-space:nowrap;
+  background:none;border:none;font-family:inherit;font-size:1rem}
+.tab:hover{background:var(--panel-hover)}
+.tab.active{color:var(--text);font-weight:800}
+.tab.active::after{content:"";position:absolute;bottom:0;height:4px;width:64px;border-radius:9999px;
+  background:var(--blue)}
+  
