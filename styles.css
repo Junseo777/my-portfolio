@@ -78,4 +78,33 @@ svg{display:block}
 .tab.active{color:var(--text);font-weight:800}
 .tab.active::after{content:"";position:absolute;bottom:0;height:4px;width:64px;border-radius:9999px;
   background:var(--blue)}
-  
+
+/* ---- TWEETS ------------------------------------------------------------- */
+.pinned{padding:8px 16px 0;color:var(--dim);font-size:.82rem;font-weight:600;
+  display:flex;align-items:center;gap:8px}
+.tweet{display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);
+  cursor:pointer;transition:background .15s}
+.tweet:hover{background:var(--hover-tint)}
+.tweet .pfp_small {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: url('./images/pfp.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.tweet .body{flex:1;min-width:0}
+.tweet .head{display:flex;align-items:center;gap:5px;font-size:.95rem;flex-wrap:wrap}
+.tweet .head .nm{font-weight:700}
+.tweet .head .hd,.tweet .head .dt{color:var(--dim);font-weight:400}
+.tweet .text{font-size:1rem;line-height:1.45;margin-top:2px;white-space:pre-wrap}
+
+.actions{display:flex;justify-content:space-between;max-width:430px;margin-top:12px;color:var(--dim)}
+.act{display:flex;align-items:center;gap:6px;font-size:.85rem;cursor:pointer;transition:color .2s}
+.act .ic{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;margin:-7px;transition:background .2s}
+.act:hover{color:var(--blue)} .act:hover .ic{background:rgba(29,155,240,.1)}
+.act.like:hover{color:var(--like)} .act.like:hover .ic{background:rgba(249,24,128,.1)}
+.act.rt:hover{color:var(--rt)} .act.rt:hover .ic{background:rgba(0,186,124,.1)}
+
