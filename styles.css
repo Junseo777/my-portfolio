@@ -1,4 +1,3 @@
-/* ---- THEME VARIABLES ---------------------------------------------------- */
 :root{
   --bg:#000;                 
   --panel:#16181c;           
@@ -26,13 +25,13 @@ svg{display:block}
 .icon-sm{width:18px;height:18px;fill:currentColor}
 .verified{width:19px;height:19px}
 
-/* ---- LAYOUT: two centred columns ---------------------------------------*/
+/* columns */
 .app{
   max-width:988px;margin:0 auto;
   display:grid;grid-template-columns:minmax(0,600px) 350px;
 }
 
-/* ---- CENTER------------------------------------------------------ */
+/* center */
 .feed{border-left:1px solid var(--border);border-right:1px solid var(--border);min-height:100vh}
 
 .topbar{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);
@@ -66,7 +65,7 @@ svg{display:block}
 .counts{display:flex;gap:20px;margin-top:12px;font-size:.95rem}
 .counts b{color:var(--text)} .counts .c{color:var(--dim)}
 
-/* ---- TAB BAR-----------------------*/
+/* tab bar */
 .tabs{display:flex;border-bottom:1px solid var(--border);position:sticky;top:53px;z-index:15;
   backdrop-filter:blur(12px);background:rgba(0,0,0,.65);overflow-x:auto;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
@@ -79,7 +78,7 @@ svg{display:block}
 .tab.active::after{content:"";position:absolute;bottom:0;height:4px;width:64px;border-radius:9999px;
   background:var(--blue)}
 
-/* ---- TWEETS ------------------------------------------------------------- */
+/* tweets */
 .pinned{padding:8px 16px 0;color:var(--dim);font-size:.82rem;font-weight:600;
   display:flex;align-items:center;gap:8px}
 .tweet{display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);
@@ -108,3 +107,28 @@ svg{display:block}
 .act.like:hover{color:var(--like)} .act.like:hover .ic{background:rgba(249,24,128,.1)}
 .act.rt:hover{color:var(--rt)} .act.rt:hover .ic{background:rgba(0,186,124,.1)}
 
+/* project tweets */
+.act.rt:hover{color:var(--rt)} .act.rt:hover .ic{background:rgba(0,186,124,.1)}
+.card{border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:12px}
+.card .cimg{height:130px;background:linear-gradient(120deg,#0a2233,#123a52,#1d9bf0)}
+.card .cimg.alt{background:linear-gradient(120deg,#2a1a3d,#4b2d6b,#794bc4)}
+.card .cbody{padding:12px}
+.card .ctitle{font-weight:700;font-size:.95rem}
+.card .cdesc{color:var(--dim);font-size:.9rem;margin-top:3px;line-height:1.35}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{font-size:.8rem;color:var(--blue);background:rgba(29,155,240,.1);padding:3px 10px;border-radius:9999px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.feed-group{display:none}
+.feed-group.show{display:block}
