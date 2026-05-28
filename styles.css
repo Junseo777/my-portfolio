@@ -132,3 +132,36 @@ svg{display:block}
 
 .feed-group{display:none}
 .feed-group.show{display:block}
+
+/* responsive */
+@media (max-width:988px){
+  .app{grid-template-columns:minmax(0,600px);justify-content:center}
+  .right{display:none}
+}
+
+/* mobile */
+
+/* hide nav + fab on desktop */
+.mobnav, .fab { display: none; }
+
+@media (max-width: 600px) {
+
+  /*  profile sizing for mobile  */
+  .banner { height: 130px; }
+  .pfp-wrap { width: 76px; height: 76px; top: -38px; padding: 3px; }
+  .identity { margin-top: 36px; }
+  .identity .name { font-size: 1.2rem; }
+  .edit-btn { padding: 6px 14px; font-size: .85rem; }
+
+  .tab{
+    flex: 0 0 auto;     /* size to content, don't stretch */
+    padding: 0 14px;
+    font-size: .9rem;
+    min-width: 0;
+  }
+  .tab.active::after{ width: 60%; }  /* underline scales to the word */
+}
+
+
+
+
